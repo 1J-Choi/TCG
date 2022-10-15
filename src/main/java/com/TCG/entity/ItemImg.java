@@ -14,7 +14,7 @@ public class ItemImg {
     @Id
     @Column(name = "item_img")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     private String imgName; //이미지 파일명
     private String oriImgName; // 원본 이미지 파일명
@@ -24,7 +24,7 @@ public class ItemImg {
     @JoinColumn(name = "item_id")
     private Item item;
 
-    public void updateQueBundleImg(String oriImgName, String imgName, String imgUrl){
+    public void updateItemImg(String oriImgName, String imgName, String imgUrl){
         this.oriImgName = oriImgName;
         this.imgName = imgName;
         this.imgUrl = imgUrl;

@@ -1,5 +1,6 @@
 package com.TCG.entity;
 
+import com.TCG.Dto.ItemFormDto;
 import com.TCG.constant.CardProp;
 import com.TCG.constant.CardRace;
 import com.TCG.constant.CardType;
@@ -18,7 +19,7 @@ public class Item {
     @Id
     @Column(name = "item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
@@ -44,4 +45,18 @@ public class Item {
     private int cost;
 
     private String detail;
+
+    public void updateItem(ItemFormDto itemFormDto){
+        this.cardName = itemFormDto.getCardName();
+        this.cardProp = itemFormDto.getCardProp();
+        this.cardRace = itemFormDto.getCardRace();
+        this.cardType = itemFormDto.getCardType();
+        this.level = itemFormDto.getLevel();
+        this.rank = itemFormDto.getRank();
+        this.atk = itemFormDto.getAtk();
+        this.def = itemFormDto.getDef();
+        this.count = itemFormDto.getCount();
+        this.cost = itemFormDto.getCost();
+        this.detail = itemFormDto.getDetail();
+    }
 }
