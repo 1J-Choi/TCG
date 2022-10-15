@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>유희왕 1대1 트레이드 마켓 YTM</title>
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- jQuery UI library -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
+    <script src="capstone/bootstrap/js/bootstrap.min.js"></script>
+    <!-- 부트스트랩 -->
+    <link href="capstone/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+    <link href="capstone/vendors/overlayscrollbars/A.OverlayScrollbars.min.css.pagespeed.cf.bqcmYp5tA5.css" rel="stylesheet">
+    <link href="capstone/assets/css/A.theme-rtl.min.css.pagespeed.cf.c1GvLEHr-M.css" rel="stylesheet" id="style-rtl"> //
+    <link href="capstone/assets/css/A.theme.min.css.pagespeed.cf.JxYXfe5_Xn.css" rel="stylesheet" id="style-default">
+    <style id="user-style-rtl"></style>
+    <style id="user-style-default"></style>
+    <link href="capstone/assets/css/A.ob.css,qver111.pagespeed.cf.XRsZwkQzMh.css" rel="stylesheet" id="ob-style-default">
+    <link href="capstone/assets/css/A.maggle.css,qver111.pagespeed.cf.PAhAq977Yf.css" rel="stylesheet" id="maggle-style-default">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.min.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" type="text/css"/>
+    <script src="capstone/vendors/overlayscrollbars/OverlayScrollbars.min.js.pagespeed.jm.t1YsCQmC4s.js"></script>
+    <script>var isRTL=JSON.parse(localStorage.getItem("isRTL"));if(isRTL){var linkDefault=document.getElementById("style-default");var userLinkDefault=document.getElementById("user-style-default");linkDefault.setAttribute("disabled",true);userLinkDefault.setAttribute("disabled",true);document.querySelector("html").setAttribute("dir","rtl");}else{var linkRTL=document.getElementById("style-rtl");var userLinkRTL=document.getElementById("user-style-rtl");linkRTL.setAttribute("disabled",true);userLinkRTL.setAttribute("disabled",true);}</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SHZJ4EE18"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-8SHZJ4EE18");</script>
+  </head>
+
+
+  
+  <body>
+    <main class="main" id="top" style="overflow-x: hidden;">
+      <div class="container" data-layout="container" style="padding-right: var(--falcon-gutter-x,0.5rem);padding-left: var(--falcon-gutter-x,0.5rem);">
+        <script>var isFluid=JSON.parse(localStorage.getItem("isFluid"));if(isFluid){var container=document.querySelector("[data-layout]");container.classList.remove("container");container.classList.add("container-fluid");}</script><nav class="navbar navbar-light navbar-vertical navbar-expand-xl navbar-vibrant">
+<script>var navbarStyle=localStorage.getItem("navbarStyle");if(navbarStyle&&navbarStyle!=="transparent"){document.querySelector(".navbar-vertical").classList.add('navbar-${navbarStyle}');}</script>
+<div class="d-flex align-items-center">
+  <div class="toggle-icon-wrapper">
+
+    <button class="btn navbar-toggler-humburger-icon navbar-vertical-toggle" data-bs-toggle="tooltip" data-bs-placement="left" title="메뉴열기"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+
+  </div><a class="navbar-brand" href="index.php">
+    <div class="d-flex align-items-center py-3"><span class="font-sans-serif">YTM</span>
+    </div>
+  </a>
+</div>    
+    <div class="collapse navbar-collapse" id="navbarVerticalCollapse" style=";">
+        <div class="navbar-vertical-content scrollbar">
+          <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">                
+            <li class="nav-item">
+              <!-- label-->
+              <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                <div class="col-auto navbar-vertical-label"> 메인
+                </div>
+                <div class="col ps-0">
+                  <hr class="mb-0 navbar-vertical-divider"/>
+                </div>
+              </div>
+              <!-- parent pages--><a class="nav-link" href="https://kauth.kakao.com/oauth/authorize?client_id=7fe1ec9a83c2dd4636c4e798fae77dee&redirect_uri=https%3A%2F%2Fopenbinder.co.kr%2Findex.php&response_type=code" role="button">
+                <div class="d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="left" title="카카오 계정이 필요합니다."><span class="nav-link-icon"><span class="fas fa-power-off"></span></span><span class="nav-link-text ps-1">로그인</span>
+                </div>
+              </a>
+                  <!-- parent pages--><a class="nav-link" href="index.php?page=announcement" role="button">
+                    <div class="d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="left" title="공지사항"><span class="nav-link-icon"><span class="fas fa-broadcast-tower"></span></span><span class="nav-link-text ps-1">공지사항</span>&nbsp;
+                    </div>
+                  </a>
+              <!-- parent pages--><a class="nav-link" href="index.php?page=help" role="button">
+                    <div class="d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="left" title="사용안내"><span class="nav-link-icon"><span class="fas fa-question-circle"></span></span><span class="nav-link-text ps-1">도움말</span>
+                    </div>
+              </a>        
+
+              <!-- label-->
+              <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                <div class="col-auto navbar-vertical-label"> 카드 정보
+                </div>
+                <div class="col ps-0">
+                  <hr class="mb-0 navbar-vertical-divider"/>
+                </div>
+              </div>
+              <!-- parent pages-->
+              <p>             
+                    <img src="capstone/image/tm.png" style="width:100%;max-width:200px;cursor:pointer;" onclick="setCooki('ob_productmode', '', 1);location.href = 'https://openbinder.co.kr/index.php?page=search';">                    
+                    </p>
+              <!-- parent pages--><a class="nav-link" href="index.php?page=search" role="button">
+                <div class="d-flex align-items-center" data-bs-toggle="tooltip" data-bs-placement="left" title="구매 혹은 정보를 알고 싶은 카드 검색"><span class="nav-link-icon"><span class="fas fa-search"></span></span><span class="nav-link-text ps-1">카드검색</span>
+                </div>
+              </a>
+
+              <ul class="nav collapse show" id="setlist">
+                <li class="nav-item"><a class="nav-link" href="index.php?page=formats">
+                  <div class="align-items-center" style="/*white-space:nowrap;overflow:hidden;text-overflow:ellipsis;*/"><span class="nav-link-text ps-1"><i style="margin-right:2px;float:left;width:30px;" class="ss ss-grad ss-2x ss-"></i>금지 목록</span>
+                  </div>
+                </a>
+                <!-- more inner pages-->
+              </li>
+            </li>
+          </ul>              
+        </div>
+      </div>
+    </nav><div class="content">
+          <nav class="navbar navbar-light navbar-glass navbar-top navbar-expand">
+
+            <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
+            <a class="navbar-brand me-1 me-sm-3" href="index.php">
+              <div class="d-flex align-items-center"><span class="font-sans-serif">YTM</span>
+              </div>
+            </a>
+            <ul class="navbar-nav navbar-nav-icons ms-auto flex-row align-items-right">
+              <li class="nav-item">
+              
+              </li>              
+            </ul>
+          <ul class="navbar-nav align-items-center d-lg-block">
+<li class="nav-item">
+  <div class="search" style="max-width:150px;">
+    
+      <input id="skill_input" class="form-control" type="search" placeholder="검색" style="line-height: 1.7;border-radius: 50rem;-webkit-box-shadow: none;box-shadow: none;"/>
+      
+    
+  </div>
+</li>
+</ul></nav>
+
+<div id="main" class="card mb-3" style="/*height:calc(100vh - 12rem);*/min-height:1024px;overflow-y:scroll;"><div class="row g-3 mb-3 mt-3" style="width:95%;margin:0 auto;">
+  <div class="col col-sm-auto d-flex align-items-center pe-0">
+  <h2 class="mb-0 text-primary position-relative">카드검색</h2>     
+      </div>
+    <h3 style="text-align:center;display:inline;">아래 검색창을 통해 카드명을 검색하세요!</h3>
+    <div class="search" style="width:100%;max-width:300px;margin:0 auto;">
+    <input id="skill_input_1" class="form-control" type="search" placeholder="카드 이름을 입력하세요." style="padding-left: 2rem;padding-right: 2rem;line-height: 1.7;border-radius: 50rem;-webkit-box-shadow: none;box-shadow: none;"/>
+  </div>
+  <div class="row g-3 mb-3 mt-3" style="width:95%;margin:0 auto;"></div>
+<div class="col col-sm-auto d-flex align-items-center pe-0">
+    <h2 class="mb-0 text-primary position-relative">최신 등록 카드</h2>            
+        </div>
+        </div>
+      <div class="row g-3 mb-3 mt-3" style="width:95%;margin:0 auto;"><div class='col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2 mb-2' style='border:1px gray solid;border-radius:6px;padding-right:0px;padding-left:0px;cursor:pointer;' onclick='location.href="index.php?set=J17&code=2";'><div class="text-center obdf_panel" style="margin:0 auto;position:relative;"><img src="capstone/image/eld.png" style="width:100%;max-width:300px;border-radius:8px;" loading="lazy"><span style="position:absolute;left:35%;bottom:70%;width:100%;z-index:10;"></span><span style="position:absolute;left:5%;bottom:5%;width:100%;z-index:10;"></span></div><div style="text-align:center;"><table class="pricebox" style="width:100%;color:black;background:whitesmoke;border-radius:8px;margin:0 auto;"><tr><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-j17 ss-rare"></i></th><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-j17 ss-foil"></i></th></tr><tr><td class="ckprice" style="width:50%;">(미지원)</td><td class="ckprice" style="width:50%;">$229.99</td></tr><tr><td colspan="2">판매자 1명 <button class="btn btn-success" style="padding:0 3px 0 3px;font-size:14px;">구매하기</button></td></tr></table></div></div>
+      <div class='col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2 mb-2' style='border:1px gray solid;border-radius:6px;padding-right:0px;padding-left:0px;cursor:pointer;' onclick='location.href="index.php?set=2X2&code=79";'><div class="text-center obdf_panel" style="margin:0 auto;position:relative;"><img src="capstone/image/eldfu.png" style="width:100%;max-width:300px;border-radius:8px;" loading="lazy"><span style="position:absolute;left:35%;bottom:70%;width:100%;z-index:10;"></span><span style="position:absolute;left:5%;bottom:5%;width:100%;z-index:10;"></span></div><div style="text-align:center;"><table class="pricebox" style="width:100%;color:black;background:whitesmoke;border-radius:8px;margin:0 auto;"><tr><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-2x2 ss-mythic"></i></th><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-2x2 ss-foil"></i></th></tr><tr><td class="ckprice" style="width:50%;">$109.99</td><td class="ckprice" style="width:50%;">$129.99</td></tr><tr><td colspan="2">판매자 5명 <button class="btn btn-success" style="padding:0 3px 0 3px;font-size:14px;">구매하기</button></td></tr></table></div></div>
+      <div class='col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2 mb-2' style='border:1px gray solid;border-radius:6px;padding-right:0px;padding-left:0px;cursor:pointer;' onclick='location.href="index.php?set=DMU&code=290";'><div class="text-center obdf_panel" style="margin:0 auto;position:relative;"><img src="capstone/image/svgdrg.png" style="width:100%;max-width:300px;border-radius:8px;" loading="lazy"><span style="position:absolute;left:35%;bottom:70%;width:100%;z-index:10;"></span><span style="position:absolute;left:5%;bottom:5%;width:100%;z-index:10;"></span></div><div style="text-align:center;"><table class="pricebox" style="width:100%;color:black;background:whitesmoke;border-radius:8px;margin:0 auto;"><tr><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-dmu ss-mythic"></i></th><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-dmu ss-foil"></i></th></tr><tr><td class="ckprice" style="width:50%;">$54.99</td><td class="ckpriceno" style="text-decoration:line-through;width:50%;">$64.99</td></tr><tr><td colspan="2">판매자 1명 <button class="btn btn-success" style="padding:0 3px 0 3px;font-size:14px;">구매하기</button></td></tr></table></div></div>
+      <div class='col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2 mb-2' style='border:1px gray solid;border-radius:6px;padding-right:0px;padding-left:0px;cursor:pointer;' onclick='location.href="ytm2.html";'><div class="text-center obdf_panel" style="margin:0 auto;position:relative;"><img src="capstone/image/aze.png" style="width:100%;max-width:300px;border-radius:8px;" loading="lazy"><span style="position:absolute;left:35%;bottom:70%;width:100%;z-index:10;"></span><span style="position:absolute;left:5%;bottom:5%;width:100%;z-index:10;"></span></div><div style="text-align:center;"><table class="pricebox" style="width:100%;color:black;background:whitesmoke;border-radius:8px;margin:0 auto;"><tr><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-dmu ss-mythic"></i></th><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-dmu ss-foil"></i></th></tr><tr><td class="ckprice" style="width:50%;">(미지원)</td><td class="ckprice" style="width:50%;">$49.99</td></tr><tr><td colspan="2">판매자 2명 <button class="btn btn-success" style="padding:0 3px 0 3px;font-size:14px;">구매하기</button></td></tr></table></div></div>
+      <div class='col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2 mb-2' style='border:1px gray solid;border-radius:6px;padding-right:0px;padding-left:0px;cursor:pointer;' onclick='location.href="index.php?set=2X2&code=50";'><div class="text-center obdf_panel" style="margin:0 auto;position:relative;"><img src="capstone/image/nf.png" style="width:100%;max-width:300px;border-radius:8px;" loading="lazy"><span style="position:absolute;left:35%;bottom:70%;width:100%;z-index:10;"></span><span style="position:absolute;left:5%;bottom:5%;width:100%;z-index:10;"></span></div><div style="text-align:center;"><table class="pricebox" style="width:100%;color:black;background:whitesmoke;border-radius:8px;margin:0 auto;"><tr><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-2x2 ss-rare"></i></th><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-2x2 ss-foil"></i></th></tr><tr><td class="ckprice" style="width:50%;">$42.99</td><td class="ckprice" style="width:50%;">$54.99</td></tr><tr><td colspan="2">판매자 3명 <button class="btn btn-success" style="padding:0 3px 0 3px;font-size:14px;">구매하기</button></td></tr></table></div></div>
+      <div class='col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-2 mb-2' style='border:1px gray solid;border-radius:6px;padding-right:0px;padding-left:0px;cursor:pointer;' onclick='location.href="index.php?set=CLB&code=382";'><div class="text-center obdf_panel" style="margin:0 auto;position:relative;"><img src="capstone/image/linkri.png" style="width:100%;max-width:300px;border-radius:8px;" loading="lazy"><span style="position:absolute;left:35%;bottom:70%;width:100%;z-index:10;"></span><span style="position:absolute;left:5%;bottom:5%;width:100%;z-index:10;"></span></div><div style="text-align:center;"><table class="pricebox" style="width:100%;color:black;background:whitesmoke;border-radius:8px;margin:0 auto;"><tr><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-clb ss-mythic"></i></th><th class="ckprice" style="text-align:center;width:50%;"><i style="" class="ss ss-grad ss-2x ss-clb ss-foil"></i></th></tr><tr><td class="ckprice" style="width:50%;">$32.99</td><td class="ckprice" style="width:50%;">$49.99</td></tr><tr><td colspan="2">판매자 3명 <button class="btn btn-success" style="padding:0 3px 0 3px;font-size:14px;">구매하기</button></td></tr></table></div></div></div>
+      <div class="row g-3 mb-3" style="width:95%;margin:0 auto;"><div class="col-sm-12 col-md-12"><h5 style="background-color:rgb(203,203,203,0.5);border-radius:6px;padding-left:3px;"><i style="" class="ss ss-grad ss-2x ss-dmu ss-mythic"></i></h5></div></div><div class="row g-3 mb-3" style="width:95%;margin:0 auto;"><div class="col-md-6 d-flex" style=""><div class="card overflow-hidden" style="">
+        
+        
+</div></div>        
+      </div>
+    </main>
+    <input type="text" id="ShareUrl" style="width:10px;">
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/popper/popper.min.js.pagespeed.jm.xAgiSZEJtL.js"></script>
+    <script src="vendors/bootstrap,_bootstrap.min.js+anchorjs,_anchor.min.js+is,_is.min.js.pagespeed.jc.PiUAB3Cssu.js"></script><script>eval(mod_pagespeed_hUa4a3HpBB);</script>
+    
+    <script>eval(mod_pagespeed_2W2nvXhlEy);</script>
+    <script>eval(mod_pagespeed_kJh02MUZJg);</script>
+    <script src="vendors/echarts/echarts.min.js.pagespeed.jm.YDXAjA8YS_.js"></script>
+    <script src="vendors/progressbar/progressbar.min.js.pagespeed.jm.-mxQzqREh5.js"></script>
+    <script src="vendors/fontawesome/all.min.js.pagespeed.jm.CiSKhQNbgM.js"></script>
+    <script src="vendors/lodash/lodash.min.js.pagespeed.jm.W-5SXVqtAr.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/list.js/list.min.js.pagespeed.jm.xeF1Pxl6Da.js"></script>
+    <script src="assets/js/theme.js.pagespeed.jm.k18nSc2XfC.js"></script>
+    
+    <script src="assets,_js,_spin.js+vendors,_countup,_countUp.umd.js.pagespeed.jc.AD6bKwgtdO.js"></script><script>eval(mod_pagespeed_inKPcq8at7);</script>
+    <script>eval(mod_pagespeed_5C1NvoffAm);</script>
+    <script>$("#main").overlayScrollbars({overflowBehavior:{x:""}});var spinner;jQuery(function(){spinner=new Spinner().spin().el;jQuery(document.body).append(spinner);jQuery(spinner).css("display","none");jQuery(spinner).css("top",Math.max(0,(($(window).height()-jQuery(spinner).outerHeight())/2)+$(window).scrollTop())+"px");jQuery(spinner).css("left",Math.max(0,(($(window).width()-jQuery(spinner).outerWidth())/2)+$(window).scrollLeft())+"px");});window.onbeforeunload=function(e){if(e!=null&&e!=undefined){jQuery(spinner).css("display","");}jQuery(spinner).css("top",Math.max(0,(($(window).height()-jQuery(spinner).outerHeight())/2)+$(window).scrollTop())+"px");jQuery(spinner).css("left",Math.max(0,(($(window).width()-jQuery(spinner).outerWidth())/2)+$(window).scrollLeft())+"px");};</script>
+  </body>
+</html>
