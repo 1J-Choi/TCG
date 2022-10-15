@@ -36,51 +36,19 @@
 </th:block>
 
 <div layout:fragment="content">
+    <div id="main" class="card mb-3" style="/*height:calc(100vh - 12rem);*/min-height:1024px;overflow-y:scroll;"><div class="row g-3 mb-3 mt-3" style="width:95%;margin:0 auto;">
+        <h3 style="text-align:center;display:inline;">아래 검색창을 통해 카드명을 검색하세요!</h3>
+        <div class="search" style="width:100%;max-width:300px;margin:0 auto;">
+            <input id="skill_input_1" class="form-control" type="search" placeholder="카드 이름을 입력하세요." style="padding-left: 2rem;padding-right: 2rem;line-height: 1.7;border-radius: 50rem;-webkit-box-shadow: none;box-shadow: none;"/>
+        </div>
 
-    <input type="hidden" name="searchQuery" th:value="${itemSearchDto.searchQuery}">
-    <div th:if="${not #strings.isEmpty(itemSearchDto.searchQuery)}" class="center">
-        <p class="h3 font-weight-bold" th:text="${itemSearchDto.searchQuery} + ' 검색결과'"></p>
+        <div class="col col-sm-auto d-flex align-items-center pe-0">
+            <h2 class="mb-0 text-primary position-relative">최신 등록 카드</h2>
+                <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
+            <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
+            <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
+            <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
+        </div>
     </div>
-
-    <div class="row">
-        <th:block th:each="item, status: ${items.getContent()}">
-            <div class="col-md-4-margin">
-                <div class="card">
-                    <a th:href="'/item/' + ${item.id}" class="text-dark">
-                        <img th:src="${item.imgUrl}" class="card-img-top" th:alt="${item.itemNm}" height="400">
-                        <div class="card-body">
-                            <h4 class="card-title">[[${item.itemNm}]]</h4>
-                            <p class="card-text">[[${item.itemDetail}]]</p>
-                            <h3 class="card-title text-danger">[[${item.price}]]원</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </th:block>
     </div>
-
-    <div th:with="start=${(items.number/maxPage)*maxPage +1},
-    end=(${(items.totalPages == 0) ? 1 : (start + (maxPage-1) < items.totalPages ?
-    start + (maxPage - 1) : items.totalPages)})">
-        <ul class="pagination justify-content-center">
-            <li class="page-item" th:classappend="${items.number eq 0}?'disabled'">
-                <a th:href="@{'/' + '?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number-1}}"
-                   aria-label="Previous" class="page-link">
-                    <span aria-hidden="true">Previous</span>
-                </a>
-            </li>
-            <li class="page-item" th:each="page: ${#numbers.sequence(start,end)}"
-                th:classappend="${items.number eq page-1}?'active':''">
-                <a th:href="@{'/' + '?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${page -1}}"
-                   th:inline="text" class="page-link">[[${page}]]</a>
-            </li>
-            <li class="page-item" th:classappend="${items.number+1 ge items.totalPages}?'disabled'">
-                <a th:href="@{'/' + '?searchQuery=' + ${itemSearchDto.searchQuery} + '&page=' + ${items.number + 1}}"
-                   aria-label="Next" class="page-link">
-                    <span aria-hidden="true">Next</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
 </html>
