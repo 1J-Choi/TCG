@@ -5,52 +5,49 @@
 <!--사용자 css 추가-->
 <th:block layout:fragment="css">
   <style>
-    .carousel-inner > .item {
-      height : 350px;
-    }
-    .margin {
-      margin-bottom : 30px;
-    }
-    .banner {
-      height : 100px;
-      position : absolute; top:0; left:0;
-      width : 100%;
-      height : 100%;
-    }
-    .card-text {
-      text-overflow : ellipsis;
-      white-space : nowrap;
-      overflow : hidden;
-    }
-    a:hover {
-      text-decoration : none;
-    }
-    .center {
-      text-align : center;
-    }
-    .card-body:hover {
-    background : #ccc;
-    transition : all 1s Ease-in-out;
-    }
+
+  .products {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 740px;
+    text-align: center;
+  }
+
+  .products img{
+    width: 225px;
+    height: 225px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+  }
+
+  .products a{
+    text-decoration: none;
+    color: black;
+    float: left;
+    font-size: 11px;
+  }
+
+  .price{
+    margin-top: 4px;
+    margin-bottom: 4;
+  }
   </style>
 </th:block>
 
 
 <div layout:fragment="content">
   <div id="main" class="card mb-3" style="/*height:calc(100vh - 12rem);*/min-height:1024px;overflow-y:scroll;"><div class="row g-3 mb-3 mt-3" style="width:95%;margin:0 auto;">
-    <h3 style="text-align:center;display:inline;">아래 검색창을 통해 카드명을 검색하세요!</h3>
-    <div class="search" style="width:100%;max-width:300px;margin:0 auto;">
-      <input id="skill_input_1" class="form-control" type="search" placeholder="카드 이름을 입력하세요." style="padding-left: 2rem;padding-right: 2rem;line-height: 1.7;border-radius: 50rem;-webkit-box-shadow: none;box-shadow: none;"/>
-    </div>
-
-    <div class="col col-sm-auto d-flex align-items-center pe-0">
+    <div class="products">
       <h2 class="mb-0 text-primary position-relative">최신 등록 카드</h2>
-      <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
-      <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
-      <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
-      <img src=""><span><tr><td>? $</td></tr><tr><td colspan="2">판매자 ?명<button>구매하기</button></span></td></tr>
+      <a ref=""><img src=""><p class="price">? $</p><p>판매자 ?명<button>구매하기</button></p></a>
+      <a ref=""><img src=""><p class="price">? $</p><p>판매자 ?명<button>구매하기</button></p></a>
+      <a ref=""><img src=""><p class="price">? $</p><p>판매자 ?명<button>구매하기</button></p></a>
+      <a ref=""><img src=""><p class="price">? $</p><p>판매자 ?명<button>구매하기</button></p></a>
+      <a ref=""><img src=""><p class="price">? $</p><p>판매자 ?명<button>구매하기</button></p></a>
+      <a ref=""><img src=""><p class="price">? $</p><p>판매자 ?명<button>구매하기</button></p></a>
     </div>
-  </div>
-  </div>
+    </div>
+    </div>
 </div>
 </html>
