@@ -63,7 +63,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">가격</span>
             </div>
-            <input type="number" th:field="*{price}" class="form-control" placeholder="상품가격 입력">
+            <input type="number" th:field="*{cost}" class="form-control" placeholder="상품가격 입력">
         </div>
         <p th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}" class="fieldError">Incorrect data</p>
         <div class="input-group">
@@ -77,7 +77,7 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">상품 상세 내용</span>
             </div>
-            <textarea class="form-control" aria-label="With textarea" placeholder="카드상태, 기타정보 입력" th:field="*{itemDetail}"></textarea>
+            <textarea class="form-control" aria-label="With textarea" placeholder="카드상태, 기타정보 입력" th:field="*{detail}"></textarea>
         </div>
         <p th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" class="fieldError">Incorrect data</p>
 
