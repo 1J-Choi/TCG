@@ -23,7 +23,7 @@ public class ItemController {
     @GetMapping(value = "item/new")
     public String itemForm(Model model){
         model.addAttribute("itemFormDto", new ItemFormDto());
-        return "item.itemForm";
+        return "item/itemForm";
     }
 
     @PostMapping(value = "item/new")
@@ -64,8 +64,8 @@ public class ItemController {
 
     @PostMapping(value = "item/{item_id}")
     public String itemUpdate(@Valid ItemFormDto itemFormDto, BindingResult bindingResult,
-                                  @RequestParam("itemImgFile") MultipartFile itemImgFile,
-                                  Model model){
+                             @RequestParam("itemImgFile") MultipartFile itemImgFile,
+                             Model model){
         if (bindingResult.hasErrors()) {
             return "item/itemForm";
         }
