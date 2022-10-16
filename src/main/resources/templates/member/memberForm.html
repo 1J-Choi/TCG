@@ -45,11 +45,6 @@
             <input type="text" th:field="*{address}" class="form-control" placeholder="주소를 입력해주세요.">
             <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="fieldError">Incorrect date</p>
         </div>
-        <div class="form-group">
-            <label th:for="number">Phone Number</label>
-            <input type="text" th:field="*{number}" class="form-control" placeholder="전화번호를 입력해주세요.">
-            <p th:if="${#fields.hasErrors('number')}" th:errors="*{number}" class="fieldError">Incorrect date</p>
-        </div>
 
         <div style="text-align: center">
             <button type="submit" class="btn btn-primary" style="">Submit</button>

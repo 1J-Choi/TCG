@@ -56,37 +56,37 @@
             <div class="input-group-prepend">
                 <span class="input-group-text">상품명</span>
             </div>
-            <input type="text" th:field="*{itemNm}" class="form-control" placeholder="판매 카드명">
+            <input type="text" th:field="*{cardName}" class="form-control" placeholder="판매 카드명">
         </div>
-        <p th:if="${#fields.hasErrors('itemNm')}" th:errors="*{itemNm}" class="fieldError">Incorrect data</p>
+        <p th:if="${#fields.hasErrors('cardName')}" th:errors="*{cardName}" class="fieldError">Incorrect data</p>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">가격</span>
             </div>
             <input type="number" th:field="*{price}" class="form-control" placeholder="상품가격 입력">
         </div>
-        <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}" class="fieldError">Incorrect data</p>
+        <p th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}" class="fieldError">Incorrect data</p>
         <div class="input-group">
             <div class="input-group-prepend">
-                <span class="input-group-text">재고</span>
+                <span class="input-group-text">판매 수량</span>
             </div>
-            <input type="number" th:field="*{stockNumber}" class="form-control" placeholder="판매수량 입력">
+            <input type="number" th:field="*{count}" class="form-control" placeholder="판매수량 입력">
         </div>
-        <p th:if="${#fields.hasErrors('stockNumber')}" th:errors="*{stockNumber}" class="fieldError">Incorrect data</p>
+        <p th:if="${#fields.hasErrors('count')}" th:errors="*{count}" class="fieldError">Incorrect data</p>
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">상품 상세 내용</span>
             </div>
             <textarea class="form-control" aria-label="With textarea" placeholder="카드상태, 기타정보 입력" th:field="*{itemDetail}"></textarea>
         </div>
-        <p th:if="${#fields.hasErrors('itemDetail')}" th:errors="*{itemDetail}" class="fieldError">Incorrect data</p>
+        <p th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" class="fieldError">Incorrect data</p>
 
 
         <div th:if="${#strings.isEmpty(itemFormDto.id)}" style="text-align : center">
-            <button th:formaction="@{/admin/item/new}" type="submit" class="btn btn-primary">등록하기</button>
+            <button th:formaction="@{item/new}" type="submit" class="btn btn-primary">등록하기</button>
         </div>
         <div th:unless="${#strings.isEmpty(itemFormDto.id)}" style="text-align : center">
-            <button th:formaction="@{'/admin/item/'+${itemFormDto.id}}" type="submit" class="btn btn-primary">수정</button>
+            <button th:formaction="@{'/item/'+${itemFormDto.id}}" type="submit" class="btn btn-primary">수정</button>
         </div>
 
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
