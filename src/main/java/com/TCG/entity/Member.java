@@ -32,10 +32,10 @@ public class Member {
 
     public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder){
         Member member = new Member();
-        member.setName(member.getName());
-        member.setEmail(member.getEmail());
-        String password =passwordEncoder.encode(member.getPassword());
-        member.setAdress(member.getAdress());
+        member.setName(memberFormDto.getName());
+        member.setEmail(memberFormDto.getEmail());
+        member.password =passwordEncoder.encode(memberFormDto.getPassword());
+        member.setAdress(memberFormDto.getAddress());
         member.role=Role.USER;
         return member;
     }
