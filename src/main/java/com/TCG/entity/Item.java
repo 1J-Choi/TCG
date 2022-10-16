@@ -25,7 +25,6 @@ public class Item {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @Enumerated(EnumType.STRING)
     private String cardName; // 카드 이름
     @Enumerated(EnumType.STRING)
     private CardProp cardProp; // 카드 속성
