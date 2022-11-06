@@ -1,5 +1,8 @@
 package com.TCG.controller;
 
+import com.TCG.Dto.ItemSearchDto;
+import com.TCG.Dto.MainItemDto;
+import com.TCG.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,16 +17,18 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class MainCotroller {
 
+    private final ItemService itemService;
+
     @GetMapping(value = "/")
-    public String main(/*ItemSearchDto itemSearchDto, Optional<Integer> page, Model model*/) {
-//        Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 5);
-//        if (itemSearchDto.getSearchQuery() == null) {
-//            itemSearchDto.setSearchQuery("");
-//        }
-//        Page<MainItemDto> items = itemService.getMainItemPage(itemSearchDto, pageable);
-//        model.addAttribute("items", items);
-//        model.addAttribute("itemSearchDto", itemSearchDto);
-//        model.addAttribute("maxPage", 5);
+    public String main(ItemSearchDto itemSearchDto, Optional<Integer> page, Model model) {
+        Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0, 5);
+        if (itemSearchDto.getSearchQuery() == null) {
+            itemSearchDto.setSearchQuery("");
+        }
+        Page<MainItemDto> items = itemService.getMainitemPage(itemSearchDto, pageable);
+        model.addAttribute("items", items);
+        model.addAttribute("itemSearchDto", itemSearchDto);
+        model.addAttribute("maxPage", 5);
         return "main";
     }
 }

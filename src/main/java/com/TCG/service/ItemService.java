@@ -1,6 +1,8 @@
 package com.TCG.service;
 
 import com.TCG.Dto.ItemFormDto;
+import com.TCG.Dto.ItemSearchDto;
+import com.TCG.Dto.MainItemDto;
 import com.TCG.entity.Item;
 import com.TCG.entity.ItemImg;
 import com.TCG.repository.ItemImgRepository;
@@ -70,8 +72,8 @@ public class ItemService {
     }
 
 
-//    @Transactional(readOnly = true) 메인 화면 노출
-//    public Page<MainitemDto> getMainitemPage(ItemSearchDto itemSearchDto, Pageable pageable){
-//        return itemRepository.getMainItemPage(itemSearchDto, pageable);
-//    }
+    @Transactional(readOnly = true) //메인 화면 노출
+    public Page<MainItemDto> getMainitemPage(ItemSearchDto itemSearchDto, Pageable pageable){
+        return itemRepository.getMainItemPage(itemSearchDto, pageable);
+    }
 }
