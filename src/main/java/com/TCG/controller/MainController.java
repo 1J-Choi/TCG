@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Controller
 @RequiredArgsConstructor
-public class MainCotroller {
+public class MainController {
 
     private final ItemService itemService;
 
