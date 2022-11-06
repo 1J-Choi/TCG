@@ -3,6 +3,7 @@ package com.TCG.Dto;
 import com.TCG.constant.CardProp;
 import com.TCG.constant.CardRace;
 import com.TCG.constant.CardType;
+import com.TCG.constant.ItemSellStatus;
 import com.TCG.entity.Item;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,6 +36,8 @@ public class ItemFormDto {
     private String detail;
 
     private Long itemImgId;
+
+    private ItemSellStatus itemSellStatus;
 
     private static ModelMapper modelMapper = new ModelMapper();
 

@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class ItemImg {
 
     @Id
-    @Column(name = "item_img")
+    @Column(name = "item_img_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

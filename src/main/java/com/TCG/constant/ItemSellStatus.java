@@ -1,5 +1,5 @@
 package com.TCG.constant;
 
-public enum itemSellStatus {
+public enum ItemSellStatus {
     SELL,SOLD_OUT
 }

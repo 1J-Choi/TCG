@@ -4,6 +4,7 @@ import com.TCG.Dto.ItemFormDto;
 import com.TCG.constant.CardProp;
 import com.TCG.constant.CardRace;
 import com.TCG.constant.CardType;
+import com.TCG.constant.ItemSellStatus;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -15,7 +16,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity{
     @Id
     @Column(name = "item_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -45,6 +46,8 @@ public class Item {
 
     private String detail;
 
+    private ItemSellStatus itemSellStatus;
+
     public void updateItem(ItemFormDto itemFormDto){
         this.cardName = itemFormDto.getCardName();
         this.cardProp = itemFormDto.getCardProp();
@@ -57,5 +60,6 @@ public class Item {
         this.count = itemFormDto.getCount();
         this.cost = itemFormDto.getCost();
         this.detail = itemFormDto.getDetail();
+        this.itemSellStatus = itemFormDto.getItemSellStatus();
     }
 }
