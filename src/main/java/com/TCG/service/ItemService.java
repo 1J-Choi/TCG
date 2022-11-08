@@ -1,6 +1,7 @@
 package com.TCG.service;
 
 import com.TCG.Dto.ItemFormDto;
+import com.TCG.Dto.ItemImgDto;
 import com.TCG.Dto.ItemSearchDto;
 import com.TCG.Dto.MainItemDto;
 import com.TCG.entity.Item;
@@ -16,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.EntityExistsException;
 import javax.persistence.EntityNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -39,6 +41,16 @@ public class ItemService {
         return item.getId();
     }
 
+    @Transactional(readOnly = true) // 읽기 전용 -> 더티체킹(변경 감지) -> 성능 향상상
+    public ItemFormDto getItemDtl(Long itemId) {
+        ItemImg itemImg = itemImgRepository.findByItemId(itemId); // DB에서 데이터를 가져온다
+
+        // Item 엔티티 조회 -> 조회X EntityNotFoundException 실행
+        Item item = itemRepository.findById(itemId).orElseThrow(EntityNotFoundException::new);
+        ItemFormDto itemFormDto = ItemFormDto.of(item);
+        itemFormDto.setItemImgId(itemImg.getId());
+        return itemFormDto;
+    }
     @Transactional(readOnly = true)
     public ItemFormDto getitemFormDto(Long itemId){
         Item item = itemRepository.findById(itemId).orElseThrow(EntityNotFoundException::new);
