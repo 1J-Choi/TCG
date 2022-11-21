@@ -2,6 +2,7 @@ package com.TCG.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 
@@ -20,7 +21,7 @@ public class ItemImg {
     private String oriImgName; // 원본 이미지 파일명
     private String imgUrl;// 이미지 조회 경로
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Item item;
 
