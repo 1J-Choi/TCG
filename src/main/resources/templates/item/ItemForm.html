@@ -59,6 +59,63 @@
             <input type="text" th:field="*{cardName}" class="form-control" placeholder="판매 카드명">
         </div>
         <p th:if="${#fields.hasErrors('cardName')}" th:errors="*{cardName}" class="fieldError">Incorrect data</p>
+
+        <!-- <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Card Type</span>
+            </div>
+            <input type="text" th:field="*{cardType}" class="form-control" placeholder="카드 타입">
+        </div>
+        <p th:if="${#fields.hasErrors('cardType')}" th:errors="*{cardType}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Card Race</span>
+            </div>
+            <input type="text" th:field="*{cardRace}" class="form-control" placeholder="카드 종족">
+        </div>
+        <p th:if="${#fields.hasErrors('cardRace')}" th:errors="*{cardRace}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Card Prop</span>
+            </div>
+            <input type="text" th:field="*{cardProp}" class="form-control" placeholder="카드 Prop">
+        </div>
+        <p th:if="${#fields.hasErrors('cardProp')}" th:errors="*{cardProp}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">카드 레벨</span>
+            </div>
+            <input type="text" th:field="*{level}" class="form-control" placeholder="카드 종족">
+        </div>
+        <p th:if="${#fields.hasErrors('level')}" th:errors="*{level}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">랭크</span>
+            </div>
+            <input type="text" th:field="*{rank}" class="form-control" placeholder="카드 종족">
+        </div>
+        <p th:if="${#fields.hasErrors('rank')}" th:errors="*{rank}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">공격력</span>
+            </div>
+            <input type="text" th:field="*{atk}" class="form-control" placeholder="카드 종족">
+        </div>
+        <p th:if="${#fields.hasErrors('atk')}" th:errors="*{atk}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">수비력</span>
+            </div>
+            <input type="text" th:field="*{def}" class="form-control" placeholder="카드 종족">
+        </div>
+        <p th:if="${#fields.hasErrors('def')}" th:errors="*{def}" class="fieldError">Incorrect data</p> -->
+
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">가격</span>
@@ -66,6 +123,7 @@
             <input type="number" th:field="*{cost}" class="form-control" placeholder="상품가격 입력">
         </div>
         <p th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}" class="fieldError">Incorrect data</p>
+
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">판매 수량</span>
@@ -73,6 +131,7 @@
             <input type="number" th:field="*{count}" class="form-control" placeholder="판매수량 입력">
         </div>
         <p th:if="${#fields.hasErrors('count')}" th:errors="*{count}" class="fieldError">Incorrect data</p>
+
         <div class="input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text">상품 상세 내용</span>
@@ -80,6 +139,24 @@
             <textarea class="form-control" aria-label="With textarea" placeholder="카드상태, 기타정보 입력" th:field="*{detail}"></textarea>
         </div>
         <p th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" class="fieldError">Incorrect data</p>
+
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">카드 이미지 첨부</span>
+            </div>
+            <input type="file" accept="image/*" th:field="*{itemImgId}" class="form-control" placeholder="카드 이미지 첨부">
+        </div>
+        <p th:if="${#fields.hasErrors('itemImgId')}" th:errors="*{itemImgId}" class="fieldError">Incorrect data</p>
+
+
+
+        <!--<div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">판매 현황</span>
+            </div>
+            <input type="text" th:field="*{itemSellStatus}" class="form-control" placeholder="카드 판매 현황">
+        </div>
+        <p th:if="${#fields.hasErrors('itemSellStatus')}" th:errors="*{itemSellStatus}" class="fieldError">Incorrect data</p>-->
 
 
         <div th:if="${#strings.isEmpty(itemFormDto.id)}" style="text-align : center">
