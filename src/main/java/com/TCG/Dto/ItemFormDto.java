@@ -35,7 +35,8 @@ public class ItemFormDto {
 
     private String detail;
 
-    private Long itemImgId;
+    private ItemImgDto itemImgDto = new ItemImgDto();
+    private Long itemImgId = itemImgDto.getId();
 
     private ItemSellStatus itemSellStatus;
 

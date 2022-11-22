@@ -140,13 +140,30 @@
         </div>
         <p th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}" class="fieldError">Incorrect data</p>
 
-        <div class="input-group">
-            <div class="input-group-prepend">
-                <span class="input-group-text">카드 이미지 첨부</span>
+<!--        <div class="input-group">-->
+<!--            <div class="input-group-prepend">-->
+<!--                <span class="input-group-text">카드 이미지 첨부</span>-->
+<!--            </div>-->
+<!--            <input type="file" accept="image/*" th:field="*{itemImgId}" class="form-control" placeholder="카드 이미지 첨부">-->
+<!--        </div>-->
+<!--        <p th:if="${#fields.hasErrors('itemImgId')}" th:errors="*{itemImgId}" class="fieldError">Incorrect data</p>-->
+        <div th:if="${#strings.isEmpty(itemFormDto.itemImgDto)}">
+            <div class="custom-file img-div">
+                <input type="file" class="custom-file-input" name="itemImgFile">
+                <label class="custom-file-label" text="상품이미지"></label>
             </div>
-            <input type="file" accept="image/*" th:field="*{itemImgId}" class="form-control" placeholder="카드 이미지 첨부">
         </div>
-        <p th:if="${#fields.hasErrors('itemImgId')}" th:errors="*{itemImgId}" class="fieldError">Incorrect data</p>
+
+        <div th:if="${not #strings.isEmpty(itemFormDto.itemImgDto)}">
+            <div class="form-group" th:each="itemImgDto, status: ${itemFormDto.itemImgDto}">
+                <div class="custom-file img-div">
+                    <input type="file" class="custom-file-input" name="itemImgFile">
+                    <input type="hidden" name="itemImgIds" th:value="${itemImgDto.id}">
+                    <label class="custom-file-label" th:text="${not #strings.isEmpty(itemImgDto.oriImgName)} ?
+                    ${itemImgDto.oriImgName} : '상품이미지'"></label>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -160,7 +177,7 @@
 
 
         <div th:if="${#strings.isEmpty(itemFormDto.id)}" style="text-align : center">
-            <button th:formaction="@{item/new}" type="submit" class="btn btn-primary">등록하기</button>
+            <button th:formaction="@{/item/new}" type="submit" class="btn btn-primary">등록하기</button>
         </div>
         <div th:unless="${#strings.isEmpty(itemFormDto.id)}" style="text-align : center">
             <button th:formaction="@{'/item/'+${itemFormDto.id}}" type="submit" class="btn btn-primary">수정</button>

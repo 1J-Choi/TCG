@@ -145,7 +145,7 @@
 
             <div class="d-flex detail-mt-md">
                 <div class="repImgDiv">
-                    <img th:src="${item.itemImgDtoList[0].imgUrl}" class = "rounded repImg" th:alt="${item.itemNm}">
+                    <img th:src="${item.itemImgDto.imgUrl}" class = "rounded repImg" th:alt="${item.itemNm}">
                 </div>
                 <div class="wd50">
             <span th:if="${item.itemSellStatus == T(kr.co.codewiki.shoppingmall.constant.ItemSellStatus).SELL}" class="badge badge-primary mgb-15">
@@ -186,7 +186,7 @@
             </div>
 
             <!-- 등록한 상품 이미지를 반복문으로 출력 -->
-            <div th:each="itemImg : ${item.itemImgDtoList}" class="text-center">
+            <div th:each="itemImg : ${item.itemImgDto}" class="text-center">
                 <img th:if="${not #strings.isEmpty(itemImg.imgUrl)}" th:src="${itemImg.imgUrl}" class="rounded mgb-15" width="800">
             </div>
         </div>
